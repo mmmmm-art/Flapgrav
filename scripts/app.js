@@ -286,7 +286,7 @@ class Player {
 class enemy {
     constructor() {
         this.enemyImage = new Image();
-        this.enemyImage.src = "/images/enemy.png";
+        this.enemyImage.src = "/images/edge.png";
         this.x = Math.random() * 700 + 50;
         this.y = Math.random() * 700 + 50;
         this.width = 25;
@@ -305,6 +305,7 @@ class enemy {
         ctx.save();
         ctx.fillStyle = `hsla(${this.color}, 100%, 50%, 1)`
         ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.drawImage(this.enemyImage, this.x, this.y, this.width, this.height);
         ctx.restore();
     }
 }
